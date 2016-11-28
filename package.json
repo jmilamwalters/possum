@@ -30,6 +30,7 @@
     "underscore.string": "^3.2.2"
   },
   "scripts": {
+    "postinstall": "npm run build",
     "clean": "rm -rf lib/",
     "babel": "babel --source-maps -d lib/ src/",
     "build": "npm run clean && npm run babel && npm run docs",
