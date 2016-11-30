@@ -10,12 +10,17 @@ export default class Radio extends Component {
   render() {
     const {error, className, label, children, ...props} = this.props
 
-    const inputClassName = classNames({
+    const labelClassName = classNames(className, 'rev-Radio', {
+      'rev-Radio--invalid': !!error,
+    })
+
+    const inputClassName = classNames('rev-Radio-input', {
       'is-invalid-input': !!error,
+      'rev-Radio-input--invalid': !!error,
     })
 
     return (
-      <InputLabel className={className} error={error}>
+      <InputLabel className={labelClassName} error={error}>
         <input {...props} className={inputClassName} type="radio" />
         {label}
       </InputLabel>
@@ -26,6 +31,7 @@ export default class Radio extends Component {
 class RadioFieldset extends Component {
   render() {
     const {
+      className,
       options,
       name,
       value,
@@ -58,11 +64,19 @@ class RadioFieldset extends Component {
         props.defaultValue = option.value
         props.defaultChecked = defaultValue == option.value
       }
-      return <Radio {...props} />
+      return <Radio {...props} className="rev-RadioFieldset-radio" />
     })
 
+    const fieldsetClassName = classNames(className, 'rev-RadioFieldset')
+
     return (
-      <CheckableFieldset help={help} error={error} label={label} {...rest}>
+      <CheckableFieldset
+        {...rest}
+        className={fieldsetClassName}
+        help={help}
+        error={error}
+        label={label}
+      >
         {radios}
       </CheckableFieldset>
     )

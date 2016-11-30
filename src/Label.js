@@ -2,19 +2,10 @@ import React, {Component, PropTypes} from 'react'
 import classNames from 'classnames'
 
 const CLASS_NAMES = {
-  primary: 'primary',
-  secondary: 'secondary',
-  tertiary: 'tertiary',
-
-  alert: 'alert',
-  warning: 'warning',
-  success: 'success',
-  info: 'info',
-  tiny: 'tiny',
-
-  small: 'small',
-  medium: 'medium',
-  large: 'large',
+  secondary: ['secondary', 'rev-Label--secondary'],
+  alert: ['alert', 'rev-Label--alert'],
+  warning: ['warning', 'rev-Label--warning'],
+  success: ['success', 'rev-Label--success'],
 }
 
 const PROP_TYPES = {
@@ -26,7 +17,7 @@ export default class Label extends Component {
   static propTypes = PROP_TYPES
 
   get className() {
-    const classNameList = ['label']
+    const classNameList = []
     Object.keys(this.props).forEach(propName => {
       const className = CLASS_NAMES[propName]
       if (className) {
@@ -34,7 +25,7 @@ export default class Label extends Component {
       }
     })
 
-    return classNames(classNameList, this.props.className)
+    return classNames(classNameList, 'label', 'rev-Label', this.props.className)
   }
 
   render() {
