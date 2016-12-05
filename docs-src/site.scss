@@ -1,9 +1,11 @@
+@import '../scss/settings';
 @import 'foundation';
 @include foundation-everything(true);
 
 $card-radius: 8px;
 
 // Custom styles
+@import '../scss/SideBar';
 @import '../scss/Pagination';
 @import '../scss/Modal';
 @import '../scss/CardLayout';

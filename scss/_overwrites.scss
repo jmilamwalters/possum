@@ -1,0 +1,47 @@
+body,
+html {
+  height: auto;
+  font-size: $global-font-size-small; // 14pt
+  p {
+    font-size: $global-font-size-small; // 14pt
+  }
+}
+.row {
+  .row {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+form .row {
+  .row {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+a,
+button,
+input,
+select,
+textarea {
+  box-shadow: none;
+  outline: 0;
+  &:hover,
+  &:active,
+  &:focus {
+    box-shadow: none;
+    outline: 0;
+  }
+}
+img {
+  background: $dark-gray;
+}
+.columns.collapse {
+  padding: 0;
+}
+.column:last-child:not(:first-child),
+.columns:last-child:not(:first-child) {
+  float: left;
+}
+.collapse {
+  padding: 0;
+}
