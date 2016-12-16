@@ -80,12 +80,12 @@ $global-lineheight: 1.5;
 // Global Padding
 $global-padding-tiny: rem-calc(5);
 $global-padding-small: rem-calc(10);
-$global-padding: rem-calc(15);
-$global-padding-medium: rem-calc(20);
-$global-padding-large: rem-calc(30);
-$global-padding-larger: rem-calc(45);
-$global-padding-largest: rem-calc(50);
-$global-padding-jumbo: rem-calc(60);
+$global-padding: rem-calc(20);
+$global-padding-medium: rem-calc(30);
+$global-padding-large: rem-calc(40);
+$global-padding-larger: rem-calc(50);
+$global-padding-largest: rem-calc(60);
+$global-padding-jumbo: rem-calc(80);
 
 // Global Margin
 $global-margin-tiny: $global-padding-tiny;
@@ -98,7 +98,8 @@ $global-margin-largest: $global-padding-largest;
 $global-margin-jumbo: $global-padding-jumbo;
 
 // Global Width
-$global-width: 1240px;
+// $global-width: 1240px;
+$global-width: 100%;
 
 @include add-foundation-colors;
 
@@ -115,10 +116,10 @@ $breakpoint-classes: (small medium large xlarge);
 // 3. THE GRID
 $grid-row-width: $global-width;
 $grid-column-count: 12;
-$gutter-padding: 30px;
+$gutter-padding: 40px;
 $grid-column-gutter: (
-  small: 30px,
-  medium: 30px,
+  small: 40px,
+  medium: 40px,
 );
 $grid-column-align-edge: true;
 $block-grid-max: 8;

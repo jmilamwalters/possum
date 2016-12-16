@@ -1,13 +1,22 @@
-@import '../scss/settings';
+// REV CORE DOCS SITE STYLES
+@import '../scss/docs-site/settings';
+
 @import 'foundation';
-@include foundation-everything(true);
+@include foundation-everything(false);
+// ^ true invokes the flex grid
+
+// REV CORE DOCS SITE STYLES
+@import '../scss/docs-site/overwrites';
 
 $card-radius: 8px;
 
-// Custom styles
-@import '../scss/SideBar';
+// REV CORE COMPONENT STYLES
 @import '../scss/Pagination';
 @import '../scss/Modal';
 @import '../scss/CardLayout';
 @import '../scss/Card';
 @import '../scss/FileInput';
+
+// REV CORE DOCS SITE STYLES
+@import '../scss/docs-site/SideBar';
+@import '../scss/docs-site/utilities';

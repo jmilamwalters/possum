@@ -1,0 +1,69 @@
+.SideBar {
+  background: $sidebar-background;
+  color: $sidebar-color;
+  height: 100vh;
+  left: 0;
+  overflow-y: scroll;
+  position: fixed;
+  top: 0;
+}
+.SideBar-nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+.SideBar-header {
+  background: darken($sidebar-background, 12%);
+  background: $black;
+  color: $sidebar-color;
+  font-weight: bold;
+  padding: $global-padding;
+  text-transform: uppercase;
+  a {
+    color: $sidebar-color;
+  }
+}
+.SideBar-link {
+  color: $sidenav-link-color;
+  display: block;
+  padding: $global-padding-small $global-padding;
+  position: relative;
+  &:after {
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 5px;
+  }
+  &:hover,
+  &:active,
+  &:focus {
+    color: $sidenav-link-color-hover;
+    font-weight: bold;
+    text-decoration: none;
+    &:after {
+      background: darken($sidebar-background, 12%);
+      background: $black;
+    }
+  }
+}
+.is-activeSideBar-item {
+  .SideBar-link {
+    color: $white;
+    &:after {
+      background: $white;
+      &:hover,
+      &:active,
+      &:focus {
+        background: $white;
+        cursor: default;
+      }
+    }
+  }
+}
