@@ -1,6 +1,6 @@
 // Global Width
 $global-width: 100%;
-
+//
 // Global Fonts
 $font-family-sans-serif: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
 $font-family-serif: Georgia, serif;
@@ -104,8 +104,8 @@ $paragraph-margin-bottom: $global-margin;
 $paragraph-text-rendering: optimizeLegibility;
 
 // Anchor Vars
-$anchor-color: $primary;
-$anchor-color-hover: darken($primary, 10%);
+$anchor-color: $primary-color;
+$anchor-color-hover: darken($primary-color, 10%);
 $anchor-text-decoration: none;
 $anchor-text-decoration-hover: none;
 

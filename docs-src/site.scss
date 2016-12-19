@@ -1,5 +1,8 @@
 // REV CORE DOCS SITE STYLES
+@import '../scss/docs-site/colors';
+@import '../scss/docs-site/z-index';
 @import '../scss/docs-site/settings';
+@import '../scss/docs-site/_lar-vars';
 
 @import 'foundation';
 @include foundation-everything(false);
