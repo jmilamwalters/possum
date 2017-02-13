@@ -3,46 +3,84 @@ import React, {Component} from 'react'
 // For the sake of this demo, we're changing them to make them more visible.
 // For real world use, just `import {Row, Col} from './grid'` or whatever.
 import {Row as OriginalRow, Col as OriginalCol} from './grid'
-const style = {backgroundColor: 'rgba(0,0,0,0.05)'}
-const Row = (props) => <OriginalRow {...props} style={style}>{props.children}</OriginalRow>
-const Col = (props) => <OriginalCol {...props} style={style}>{props.children}</OriginalCol>
-
-const X = () => <div style={{border: '1px dotted #999'}}>X</div>
+const Row = (props) => <OriginalRow {...props}>{props.children}</OriginalRow>
+const Col = (props) => <OriginalCol {...props}>{props.children}</OriginalCol>
 
 export class Intro extends Component {
   render() {
     return (
-      <div>
+      <div className="GridExample">
         <Row>
-          <Col small={2} large={4}>x</Col>
-          <Col small={4} large={4}>x</Col>
-          <Col small={6} large={4}>x</Col>
+          <Col small={2} large={4}>
+            <span className="GridExample-rev-Col">small-2<br/>
+            large-4</span>
+          </Col>
+          <Col small={4} large={4}>
+            <span className="GridExample-rev-Col">small-4<br/>
+            large-4</span>
+          </Col>
+          <Col small={6} large={4}>
+            <span className="GridExample-rev-Col">small-6<br/>
+            large-4</span>
+          </Col>
         </Row>
         <Row>
-          <Col large={3}>x</Col>
-          <Col large={6}>x</Col>
-          <Col large={3}>x</Col>
+          <Col large={3}>
+            <span className="GridExample-rev-Col">large-3</span>
+          </Col>
+          <Col large={6}>
+            <span className="GridExample-rev-Col">large-6</span>
+          </Col>
+          <Col large={3}>
+            <span className="GridExample-rev-Col">large-3</span>
+          </Col>
         </Row>
         <Row>
-          <Col small={6} large={2}>x</Col>
-          <Col small={6} large={8}>x</Col>
-          <Col small={12} large={2}>x</Col>
+          <Col small={6} large={2}>
+            <span className="GridExample-rev-Col">small-6<br/>
+            large-2</span>
+          </Col>
+          <Col small={6} large={8}>
+            <span className="GridExample-rev-Col">small-6<br/>
+            large-8</span>
+          </Col>
+          <Col large={2}>
+            <span className="GridExample-rev-Col">large-2</span>
+          </Col>
         </Row>
         <Row>
-          <Col small={3}>x</Col>
-          <Col small={9}>x</Col>
+          <Col small={3}>
+            <span className="GridExample-rev-Col">small-3</span>
+          </Col>
+          <Col small={9}>
+            <span className="GridExample-rev-Col">small-9</span>
+          </Col>
         </Row>
         <Row>
-          <Col large={4}>x</Col>
-          <Col large={8}>x</Col>
+          <Col large={4}>
+            <span className="GridExample-rev-Col">large-4</span>
+          </Col>
+          <Col large={8}>
+            <span className="GridExample-rev-Col">large-8</span>
+          </Col>
         </Row>
         <Row>
-          <Col small={6} large={5}>x</Col>
-          <Col small={6} large={7}>x</Col>
+          <Col small={6} large={5}>
+            <span className="GridExample-rev-Col">small-6<br/>
+            large-5</span>
+          </Col>
+          <Col small={6} large={7}>
+            <span className="GridExample-rev-Col">small-6<br/>
+            large-7</span>
+          </Col>
         </Row>
         <Row>
-          <Col large={6}>x</Col>
-          <Col large={6}>x</Col>
+          <Col large={6}>
+            <span className="GridExample-rev-Col">large-6</span>
+          </Col>
+          <Col large={6}>
+            <span className="GridExample-rev-Col">large-6</span>
+          </Col>
         </Row>
 
       </div>

@@ -10,8 +10,7 @@
 
 // REV CORE DOCS SITE STYLES
 @import '../scss/docs-site/overwrites';
-
-$card-radius: 8px;
+@import '../scss/Grid';
 
 // REV CORE COMPONENT STYLES
 @import '../scss/Pagination';

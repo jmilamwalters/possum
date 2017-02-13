@@ -1,0 +1,16 @@
+.rev-Row {
+
+}
+.rev-Col {
+  padding: $global-padding;
+}
+
+// MOVE!!
+.GridExample
+  .rev-Col:nth-of-type(3n){
+    .GridExample-rev-Col {
+      background: $rev-yellow;
+      border-radius: $global-radius;
+    }
+  }
+}

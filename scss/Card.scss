@@ -1,15 +1,11 @@
 $card-background: $callout-background !default;
-
 $card-border-color: rgba($black, 0.25) !default;
 $card-border-style: solid !default;
-$card-border-width: 1px;
+$card-border-width: 1px !default;
 $card-border: $card-border-width $card-border-style $card-border-color !default;
-
-$card-padding: $callout-padding !default;
-$card-radius: $callout-radius !default;
-
+$card-padding: $global-padding !default;
+$card-radius: $global-radius !default;
 $card-fill-border-width: $card-border-width 0 !default;
-
 $card-header-background: $topbar-background !default;
 $card-footer-background: $card-header-background !default;
 
