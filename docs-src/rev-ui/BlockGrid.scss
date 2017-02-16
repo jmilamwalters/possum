@@ -1,0 +1,36 @@
+// BLOCK GRID
+@for $i from 1 through $grid-columns {
+  .rev-Row--smallUp#{$i} {
+    .rev-Col {
+      width: calc(100% / #{$i});
+    }
+  }
+  @media #{$medium-up} {
+    .rev-Row--mediumUp#{$i} {
+      .rev-Col {
+        width: calc(100% / #{$i});
+      }
+    }
+  }
+  @media #{$large-up} {
+    .rev-Row--largeUp#{$i} {
+      .rev-Col {
+        width: calc(100% / #{$i});
+      }
+    }
+  }
+  @media #{$xlarge-up} {
+    .rev-Row--xlargeUp#{$i} {
+      .rev-Col {
+        width: calc(100% / #{$i});
+      }
+    }
+  }
+  @media #{$xxlarge-up} {
+    .rev-Row--xxlargeUp#{$i} {
+      .rev-Col {
+        width: calc(100% / #{$i});
+      }
+    }
+  }
+}

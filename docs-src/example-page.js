@@ -35,22 +35,22 @@ export default class ExamplePage extends Component {
           </ol>
         </nav>
         <hr />
-        <section id="examples">
+        <div id="examples">
           <h2>Examples</h2>
-          <section id="examples-rendered">
+          <div id="examples-rendered">
             {examples}
-          </section>
+          </div>
           <hr />
           <h2>Examples Source</h2>
-          <section id="examples-source">
+          <div id="examples-source">
             <Source src={examplesSrc} />
-          </section>
-        </section>
+          </div>
+        </div>
         <hr />
-        <section id="source">
+        <div id="source">
           <h2>Source</h2>
           <Source src={componentSrc} />
-        </section>
+        </div>
       </Layout>
     )
   }

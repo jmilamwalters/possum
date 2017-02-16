@@ -91,20 +91,37 @@ export class Intro extends Component {
 export class Nesting extends Component {
   render() {
     return (
-      <Row>
-        <Col small={8}>8
-          <Row>
-            <Col small={8}>8 Nested
+      <div className="GridExample">
+        <Row>
+          <Col small={9}>
+            <span className="GridExample-rev-Col">small-9
               <Row>
-                <Col small={8}>8 Nested Again</Col>
-                <Col small={4}>4</Col>
+                <Col small={8}>
+                  <span className="GridExample-rev-Col">small-8<br/>
+                    (nested)
+                    <Row>
+                      <Col small={6}>
+                        <span className="GridExample-rev-Col">small-6<br/>
+                        (nested again)</span>
+                      </Col>
+                      <Col small={6}>
+                        <span className="GridExample-rev-Col">small-6<br/>
+                        (nested again)</span>
+                      </Col>
+                    </Row>
+                  </span>
+                </Col>
+                <Col small={4}>
+                  <span className="GridExample-rev-Col">small-4</span>
+                </Col>
               </Row>
-            </Col>
-            <Col small={4}>4</Col>
-          </Row>
-        </Col>
-        <Col small={4}>4</Col>
-      </Row>
+            </span>
+          </Col>
+          <Col small={3} className="u-hide--smallOnly">
+            <span className="GridExample-rev-Col">small-3</span>
+          </Col>
+        </Row>
+      </div>
     )
   }
 }
@@ -112,10 +129,16 @@ export class Nesting extends Component {
 export class Shrink extends Component {
   render() {
     return (
-      <Row>
-        <Col shrink><div style={{backgroundColor: '#ffff99'}}>shrunk</div></Col>
-        <Col>remainder</Col>
-      </Row>
+      <div className="GridExample">
+        <Row>
+          <Col shrink>
+            <span className="GridExample-rev-Col">shrink</span>
+          </Col>
+          <Col>
+            <span className="GridExample-rev-Col">remainder</span>
+          </Col>
+        </Row>
+      </div>
     )
   }
 }
@@ -123,22 +146,41 @@ export class Shrink extends Component {
 export class Offsets extends Component {
   render() {
     return (
-      <div>
+      <div className="GridExample">
         <Row>
-          <Col large={1}>1</Col>
-          <Col large={11}>11</Col>
+          <Col large={2}>
+            <span className="GridExample-rev-Col">large-2</span>
+          </Col>
+          <Col large={10}>
+            <span className="GridExample-rev-Col">large-10</span>
+          </Col>
         </Row>
         <Row>
-          <Col large={1}>1</Col>
-          <Col large={10} largeOffset={1}>10, offset 1</Col>
+          <Col large={2}>
+            <span className="GridExample-rev-Col">large-2</span>
+          </Col>
+          <Col large={9} largeOffset={1}>
+            <span className="GridExample-rev-Col">large-9<br/>
+            largeOffset 1</span>
+          </Col>
         </Row>
         <Row>
-          <Col large={1}>1</Col>
-          <Col large={9} largeOffset={2}>9, offset 2</Col>
+          <Col large={2}>
+            <span className="GridExample-rev-Col">large-2</span>
+          </Col>
+          <Col large={8} largeOffset={2}>
+            <span className="GridExample-rev-Col">large-8<br/>
+            largeOffset 2</span>
+          </Col>
         </Row>
         <Row>
-          <Col large={1}>1</Col>
-          <Col large={8} largeOffset={3}>8, offset 3</Col>
+          <Col large={2}>
+            <span className="GridExample-rev-Col">large-2</span>
+          </Col>
+          <Col large={7} largeOffset={3}>
+            <span className="GridExample-rev-Col">large-7<br/>
+            largeOffset 3</span>
+          </Col>
         </Row>
       </div>
     )
@@ -148,16 +190,29 @@ export class Offsets extends Component {
 export class IncompleteRowsWithoutFlexGrid extends Component {
   render() {
     return (
-      <div>
+      <div className="GridExample">
         <Row>
-          <Col medium={3}>3</Col>
-          <Col medium={3}>3</Col>
-          <Col medium={3}>3</Col>
+          <Col medium={3}>
+            <span className="GridExample-rev-Col">medium-3</span>
+          </Col>
+          <Col medium={3}>
+            <span className="GridExample-rev-Col">medium-3</span>
+          </Col>
+          <Col medium={3}>
+            <span className="GridExample-rev-Col">medium-3</span>
+          </Col>
         </Row>
         <Row>
-          <Col medium={3}>3</Col>
-          <Col medium={3}>3</Col>
-          <Col medium={3} end>3 end</Col>
+          <Col medium={3}>
+            <span className="GridExample-rev-Col">medium-3</span>
+          </Col>
+          <Col medium={3}>
+            <span className="GridExample-rev-Col">medium-3</span>
+          </Col>
+          <Col medium={3} end>
+            <span className="GridExample-rev-Col">medium-3<br/>
+            end</span>
+          </Col>
         </Row>
       </div>
     )
@@ -167,14 +222,40 @@ export class IncompleteRowsWithoutFlexGrid extends Component {
 export class RowCollapse extends Component {
   render() {
     return (
-      <Row mediumUncollapse largeUncollapse>
-        <Col small={6}>
-          Removes gutter at large media query
-        </Col>
-        <Col small={6}>
-          Removes gutter at large media query
-        </Col>
-      </Row>
+      <div className="GridExample">
+        <Row>
+          <Col><p className="large"><strong>Controlled by Row</strong> Row has collapse props but collapsed Rows have been rewritten so that the collapse only affects the direct descendents of that Row.</p></Col>
+        </Row>
+        <Row mediumCollapse>
+          <Col small={6}>
+            <span className="GridExample-rev-Col">I am a Col and my parent Row has mediumCollapse
+              <Row>
+                <Col medium={6}>
+                  <span className="GridExample-rev-Col">I am a nested Col and I do not inherit collapse styles.</span>
+                </Col>
+                <Col medium={6}>
+                  <span className="GridExample-rev-Col">I am a nested Col and I do not inherit collapse styles.</span>
+                </Col>
+              </Row>
+            </span>
+          </Col>
+          <Col small={6}>
+            <span className="GridExample-rev-Col">I am a Col and my parent Row has mediumCollapse</span>
+          </Col>
+        </Row>
+        <Row>
+          <Col><p className="large"><strong>Controlled by Col</strong> Row does not have collapse props or classes. Utility classes are added to the Col that needs collapsing. (since these are just utility classes, they can be used on whatever element needs collapse styles.)</p></Col>
+        </Row>
+        <Row>
+          <Col small={6} className="u-collapseHorizontal--large-up">
+            <span className="GridExample-rev-Col">.u-collapseHorizontal--large-up</span>
+          </Col>
+          <Col small={6} className="u-collapseHorizontal--medium-only">
+            <span className="GridExample-rev-Col">.u-collapseHorizontal--medium-only</span>
+          </Col>
+        </Row>
+
+      </div>
     )
   }
 }
@@ -182,18 +263,31 @@ export class RowCollapse extends Component {
 export class CenteredColumns extends Component {
   render() {
     return (
-      <div>
+      <div className="GridExample">
         <Row>
-          <Col small={3} smallCentered>3 centered</Col>
+          <Col small={3} smallCentered>
+            <span className="GridExample-rev-Col">small-3<br/>
+            smallCentered</span>
+          </Col>
         </Row>
         <Row>
-          <Col small={6} smallCentered>6 centered</Col>
+          <Col small={6} smallCentered>
+            <span className="GridExample-rev-Col">small-6<br/>
+            smallCentered</span>
+          </Col>
         </Row>
         <Row>
-          <Col small={9} smallCentered largeUncentered>9 centered</Col>
+          <Col small={9} smallCentered largeUncentered>
+            <span className="GridExample-rev-Col">small-9<br/>
+            smallCentered<br/>
+            largeUncentered</span>
+          </Col>
         </Row>
         <Row>
-          <Col small={11} smallCentered>11 centered</Col>
+          <Col small={11} smallCentered>
+            <span className="GridExample-rev-Col">small-11<br/>
+            smallCentered</span>
+          </Col>
         </Row>
       </div>
     )
@@ -203,26 +297,87 @@ export class CenteredColumns extends Component {
 export class SourceOrderingWithoutFlexGrid extends Component {
   render() {
     return (
-      <div>
+      <div className="GridExample">
         <Row>
-          <Col small={10} smallPush={2}>10</Col>
-          <Col small={2} smallPull={10}>2, last</Col>
+          <Col small={10} smallPush={2}>
+            <span className="GridExample-rev-Col">small-10<br/>
+            smallPush-2</span>
+          </Col>
+          <Col small={2} smallPull={10}>
+            <span className="GridExample-rev-Col">small-2<br/>
+            smallPull-10</span>
+          </Col>
         </Row>
         <Row>
-          <Col large={9} largePush={3}>9</Col>
-          <Col large={3} largePull={9}>3, last</Col>
+          <Col large={9} largePush={3}>
+            <span className="GridExample-rev-Col">large-9<br/>
+            largePush-3</span>
+          </Col>
+          <Col large={3} largePull={9}>
+            <span className="GridExample-rev-Col">large-3<br/>
+            largePull-9</span>
+          </Col>
         </Row>
         <Row>
-          <Col large={8} largePush={4}>8</Col>
-          <Col large={4} largePull={8}>4, last</Col>
+          <Col large={8} largePush={4}>
+            <span className="GridExample-rev-Col">large-8<br/>
+            largePush-4</span>
+          </Col>
+          <Col large={4} largePull={8}>
+            <span className="GridExample-rev-Col">large-4<br/>
+            largePull-8</span>
+          </Col>
         </Row>
         <Row>
-          <Col small={5} smallPush={7}>7</Col>
-          <Col small={7} smallPull={5}>5, last</Col>
+          <Col small={5} smallPush={7}>
+            <span className="GridExample-rev-Col">small-7<br/>
+            smallPush-7</span>
+          </Col>
+          <Col small={7} smallPull={5}>
+            <span className="GridExample-rev-Col">small-5<br/>
+            smallPull-5</span>
+          </Col>
         </Row>
         <Row>
-          <Col medium={6} mediumPush={6}>6</Col>
-          <Col medium={6} mediumPull={6}>6, last</Col>
+          <Col medium={6} mediumPush={6}>
+            <span className="GridExample-rev-Col">medium-6<br/>
+            mediumPush-6</span>
+          </Col>
+          <Col medium={6} mediumPull={6}>
+            <span className="GridExample-rev-Col">medium-6<br/>
+            mediumPull-6</span>
+          </Col>
+        </Row>
+      </div>
+    )
+  }
+}
+
+export class BlockGrid extends Component {
+  render() {
+    return (
+      <div className="GridExample">
+        <Row>
+          <Col>
+            <p className="large">Removed the default hover state for Thumbnail images.</p>
+          </Col>
+        </Row>
+        <Row smallUp={2} mediumUp={3} largeUp={5}>
+          <Col>
+            <img src="https://unsplash.it/300/300/?random" className="Thumbnail" alt="Placeholder image from unsplash.it"/>
+          </Col>
+          <Col>
+            <img src="https://unsplash.it/300/300/?random" className="Thumbnail" alt="Placeholder image from unsplash.it"/>
+          </Col>
+          <Col>
+            <img src="https://unsplash.it/300/300/?random" className="Thumbnail" alt="Placeholder image from unsplash.it"/>
+          </Col>
+          <Col>
+            <img src="https://unsplash.it/300/300/?random" className="Thumbnail" alt="Placeholder image from unsplash.it"/>
+          </Col>
+          <Col>
+            <img src="https://unsplash.it/300/300/?random" className="Thumbnail" alt="Placeholder image from unsplash.it"/>
+          </Col>
         </Row>
       </div>
     )
@@ -232,96 +387,148 @@ export class SourceOrderingWithoutFlexGrid extends Component {
 export class SourceOrderingWithFlexGrid extends Component {
   render() {
     return (
-      <Row>
-        <Col smallOrder={2} mediumOrder={1}>
-          This column will come second on small, and first on medium and larger.
-        </Col>
-        <Col smallOrder={1} mediumOrder={2}>
-          This column will come first on small, and second on medium and larger.
-        </Col>
-      </Row>
-    )
-  }
-}
-
-export class BlockGrids extends Component {
-  render() {
-    return (
-      <Row smallUp={1} mediumUp={2} largeUp={4}>
-        <Col>
-          <img src="//placehold.it/300x300" className="thumbnail" alt="" />
-        </Col>
-        <Col>
-          <img src="//placehold.it/300x300" className="thumbnail" alt="" />
-        </Col>
-        <Col>
-          <img src="//placehold.it/300x300" className="thumbnail" alt="" />
-        </Col>
-        <Col>
-          <img src="//placehold.it/300x300" className="thumbnail" alt="" />
-        </Col>
-        <Col>
-          <img src="//placehold.it/300x300" className="thumbnail" alt="" />
-        </Col>
-        <Col>
-          <img src="//placehold.it/300x300" className="thumbnail" alt="" />
-        </Col>
-      </Row>
-    )
-  }
-}
-
-export class HorizontalAlignmentOnRow extends Component {
-  render() {
-    return (
-      <div>
-        <Row>
-          <Col small={4}>Aligned to</Col>
-          <Col small={4}>the left</Col>
-        </Row>
-        <Row right>
-          <Col small={4}>Aligned to</Col>
-          <Col small={4}>the right</Col>
-        </Row>
-        <Row center>
-          <Col small={4}>Aligned to</Col>
-          <Col small={4}>the middle</Col>
-        </Row>
-        <Row justify>
-          <Col small={4}>Aligned to</Col>
-          <Col small={4}>the edges</Col>
-        </Row>
-        <Row spaced>
-          <Col small={4}>Aligned to</Col>
-          <Col small={4}>the space around</Col>
+      <div className="GridExample">
+        <Row flex>
+          <Col smallOrder={1} mediumOrder={2}>
+            <span className="GridExample-rev-Col">This column is first in the markup. It will be second for small screens and third for medium-up.</span>
+          </Col>
+          <Col smallOrder={2} mediumOrder={0}>
+            <span className="GridExample-rev-Col">This column is second in the markup. It will come third for small, and first for medium-up.</span>
+          </Col>
+          <Col smallOrder={0} mediumOrder={1}>
+            <span className="GridExample-rev-Col">This column is third in the markup. It will be first for small and second for medium-up.</span>
+          </Col>
         </Row>
       </div>
     )
   }
 }
 
-export class VerticalAlignmentOnRow extends Component {
+export class FlexUnstacking extends Component {
   render() {
     return (
-      <div>
-        <Row middle>
-          <Col>I{"'"}m in the middle!</Col>
-          <Col>I am as well, but I have so much text I take up more space! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis facere ducimus earum minus, inventore, ratione doloremque deserunt neque perspiciatis accusamus explicabo soluta, quod provident distinctio aliquam omnis? Labore, ullam possimus.</Col>
+      <div className="GridExample">
+        <Row mediumFlex mediumUnstack>
+          <Col>
+            <span className="GridExample-rev-Col">One</span>
+          </Col>
+          <Col>
+            <span className="GridExample-rev-Col">Two</span>
+          </Col>
+          <Col>
+            <span className="GridExample-rev-Col">Three</span>
+          </Col>
+          <Col>
+            <span className="GridExample-rev-Col">Four</span>
+          </Col>
+          <Col>
+            <span className="GridExample-rev-Col">Five</span>
+          </Col>
+        </Row>
+      </div>
+    )
+  }
+}
+
+export class FlexHorizontalAlignmentOnRow extends Component {
+  render() {
+    return (
+      <div className="GridExample">
+        <Row flex>
+          <Col small={4}>
+            <span className="GridExample-rev-Col">justify-content</span>
+          </Col>
+          <Col small={4}>
+            <span className="GridExample-rev-Col">flex-start (default)</span>
+          </Col>
+        </Row>
+        <Row flex end>
+          <Col small={4}>
+            <span className="GridExample-rev-Col">justify-content</span>
+          </Col>
+          <Col small={4}>
+            <span className="GridExample-rev-Col">flex-end</span>
+          </Col>
+        </Row>
+        <Row flex center>
+          <Col small={4}>
+            <span className="GridExample-rev-Col">justify-content</span>
+          </Col>
+          <Col small={4}>
+            <span className="GridExample-rev-Col">center</span>
+          </Col>
+        </Row>
+        <Row flex spaceBetween>
+          <Col small={4}>
+            <span className="GridExample-rev-Col">justify-content</span>
+          </Col>
+          <Col small={4}>
+            <span className="GridExample-rev-Col">space-between</span>
+          </Col>
+        </Row>
+        <Row flex spaceAround>
+          <Col small={4}>
+            <span className="GridExample-rev-Col">justify-content</span>
+          </Col>
+          <Col small={4}>
+            <span className="GridExample-rev-Col">space-around</span>
+          </Col>
+        </Row>
+      </div>
+    )
+  }
+}
+
+export class FlexVerticalAlignmentOnRow extends Component {
+  render() {
+    return (
+      <div className="GridExample">
+        <Row flex middle>
+          <Col>
+            <span className="GridExample-rev-Col">I{"'"}m in the middle!</span>
+          </Col>
+          <Col>
+            <span className="GridExample-rev-Col">I am as well, but I have so much text I take up more space! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis facere ducimus earum minus, inventore, ratione doloremque deserunt neque perspiciatis accusamus explicabo soluta, quod provident distinctio aliquam omnis? Labore, ullam possimus.</span>
+          </Col>
         </Row>
         <hr />
-        <Row top>
-          <Col>These columns align to the top.</Col>
-          <Col>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, tempora. Impedit eius officia possimus laudantium? Molestiae eaque, sapiente atque doloremque placeat! In sint, fugiat saepe sunt dolore tempore amet cupiditate.</Col>
+        <Row flex top>
+          <Col>
+            <span className="GridExample-rev-Col">These columns align to the top.</span>
+          </Col>
+          <Col>
+            <span className="GridExample-rev-Col">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, tempora. Impedit eius officia possimus laudantium? Molestiae eaque, sapiente atque doloremque placeat! In sint, fugiat saepe sunt dolore tempore amet cupiditate.</span>
+          </Col>
         </Row>
         <hr />
-        <Row bottom>
-          <Col>bottom</Col>
-          <Col>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, tempora. Impedit eius officia possimus laudantium? Molestiae eaque, sapiente atque doloremque placeat! In sint, fugiat saepe sunt dolore tempore amet cupiditate.</Col>
+        <Row flex bottom>
+          <Col>
+            <span className="GridExample-rev-Col">bottom</span>
+          </Col>
+          <Col>
+            <span className="GridExample-rev-Col">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, tempora. Impedit eius officia possimus laudantium? Molestiae eaque, sapiente atque doloremque placeat! In sint, fugiat saepe sunt dolore tempore amet cupiditate.</span>
+          </Col>
         </Row>
         <hr />
-        <Row>
-          <Col>unspecified simply fills all vertical space</Col>
-          <Col>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, tempora. Impedit eius officia possimus laudantium? Molestiae eaque, sapiente atque doloremque placeat! In sint, fugiat saepe sunt dolore tempore amet cupiditate.</Col>
+        <Row flex stretch>
+          <Col>
+            <span className="GridExample-rev-Col">stretch</span>
+          </Col>
+          <Col>
+            <span className="GridExample-rev-Col">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, tempora. Impedit eius officia possimus laudantium? Molestiae eaque, sapiente atque doloremque placeat! In sint, fugiat saepe sunt dolore tempore amet cupiditate.</span>
+          </Col>
+        </Row>
+        <hr />
+        <Row flex baseline>
+          <Col>
+            <span className="GridExample-rev-Col">baseline</span>
+          </Col>
+          <Col>
+            <span className="GridExample-rev-Col"><small>baseline</small></span>
+          </Col>
+          <Col>
+            <span className="GridExample-rev-Col"><h1>Baseline</h1></span>
+          </Col>
         </Row>
       </div>
     )
@@ -331,12 +538,36 @@ export class VerticalAlignmentOnRow extends Component {
 export class VerticalAlignmentOnCol extends Component {
   render() {
     return (
-      <Row>
-        <Col bottom>Align bottom</Col>
-        <Col middle>Align middle</Col>
-        <Col top>Align top</Col>
-        <Col>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non harum laborum cum voluptate vel, eius adipisci similique dignissimos nobis at excepturi incidunt fugit molestiae quaerat, consequuntur porro temporibus. Nisi, ex?</Col>
-      </Row>
+      <div className="GridExample">
+        <Row flex>
+          <Col end>
+            <span className="GridExample-rev-Col">Align bottom</span>
+          </Col>
+          <Col center>
+            <span className="GridExample-rev-Col">Align middle</span>
+          </Col>
+          <Col top>
+            <span className="GridExample-rev-Col">Align top</span>
+          </Col>
+          <Col>
+            <span className="GridExample-rev-Col GridExampleTallColumn">Tall column for example purposes</span>
+          </Col>
+        </Row>
+        <Row flex>
+          <Col stretch>
+            <span className="GridExample-rev-Col">Align stretch</span>
+          </Col>
+          <Col baseline>
+            <span className="GridExample-rev-Col"><h1>Align baseline</h1></span>
+          </Col>
+          <Col baseline>
+            <span className="GridExample-rev-Col"><small>Align baseline</small></span>
+          </Col>
+          <Col>
+            <span className="GridExample-rev-Col GridExampleTallColumn">Tall column for example purposes</span>
+          </Col>
+        </Row>
+      </div>
     )
   }
 }

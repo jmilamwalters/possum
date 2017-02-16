@@ -24,11 +24,11 @@ export default class Layout extends Component {
           <script>hljs.initHighlightingOnLoad();</script>
         </head>
         <body>
-          <Row className="u-collapse">
-            <Col medium={3} xlarge={2} className="SideBar">
+          <Row>
+            <Col medium={3} xlarge={2} className="SideBar u-collapse">
               <Nav keys={navKeys} />
             </Col>
-            <Col medium={9} xlarge={10}>
+            <Col end medium={9} xlarge={10}>
               <Row>
                 <Col>
                   <h1 id="top">{title}</h1>

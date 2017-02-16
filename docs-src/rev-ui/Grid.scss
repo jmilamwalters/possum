@@ -1,0 +1,286 @@
+.rev-Row {
+  clear: both;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden; //TODO: is this horrible?
+  width: 100%;
+  &.rev-Row--flex,
+  &.rev-Row--smallFlex, {
+    display: flex;
+  }
+  &.rev-Row--collapse,
+  &.rev-Row--smallCollapse {
+    padding-left: $grid-column-padding;
+    padding-right: $grid-column-padding;
+    > .rev-Col {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+  &.rev-Row--uncollapse,
+  &.rev-Row--smallUncollapse {
+    padding-left: 0;
+    padding-right: 0;
+    > .rev-Col {
+      padding-left: $grid-column-padding;
+      padding-right: $grid-column-padding;
+    }
+  }
+  @media #{$medium-up} {
+    &.rev-Row--mediumFlex {
+      display: flex;
+    }
+    &.rev-Row--mediumCollapse {
+      padding-left: $grid-column-padding;
+      padding-right: $grid-column-padding;
+      > .rev-Col {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+    &.rev-Row--mediumUncollapse {
+      padding-left: 0;
+      padding-right: 0;
+      > .rev-Col {
+        padding-left: $grid-column-padding;
+        padding-right: $grid-column-padding;
+      }
+    }
+  }
+  @media #{$large-up} {
+    &.rev-Row--largeFlex {
+      display: flex;
+    }
+    &.rev-Row--largeCollapse {
+      padding-left: $grid-column-padding;
+      padding-right: $grid-column-padding;
+      > .rev-Col {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+    &.rev-Row--largeUncollapse {
+      padding-left: 0;
+      padding-right: 0;
+      > .rev-Col {
+        padding-left: $grid-column-padding;
+        padding-right: $grid-column-padding;
+      }
+    }
+  }
+  @media #{$xlarge-up} {
+    &.rev-Row--xlargeFlex {
+      display: flex;
+    }
+    &.rev-Row--xlargeCollapse {
+      padding-left: $grid-column-padding;
+      padding-right: $grid-column-padding;
+      > .rev-Col {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+    &.rev-Row--xlargeUncollapse {
+      padding-left: 0;
+      padding-right: 0;
+      > .rev-Col {
+        padding-left: $grid-column-padding;
+        padding-right: $grid-column-padding;
+      }
+    }
+  }
+  @media #{$xxlarge-up} {
+    &.rev-Row--xxlargeFlex {
+      display: flex;
+    }
+    &.rev-Row--xxlargeCollapse {
+      padding-left: $grid-column-padding;
+      padding-right: $grid-column-padding;
+      > .rev-Col {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+    &.rev-Row--xxlargeUncollapse {
+      padding-left: 0;
+      padding-right: 0;
+      > .rev-Col {
+        padding-left: $grid-column-padding;
+        padding-right: $grid-column-padding;
+      }
+    }
+  }
+}
+
+.rev-Col {
+  float: left;
+  padding: 0 $grid-column-padding;
+  width: 100%;
+  &.rev-Col--end {
+    float: right;
+  }
+  &.rev-Col--shrink {
+    width: auto;
+  }
+}
+
+$grid-columns: 12;
+@for $i from 1 through $grid-columns {
+  .rev-Col--small#{$i} {
+    width: 100% / $grid-columns * $i;
+  }
+}
+@media #{$medium-up} {
+  @for $i from 1 through $grid-columns {
+    .rev-Col--medium#{$i} {
+      width: 100% / $grid-columns * $i;
+    }
+  }
+}
+@media #{$large-up} {
+  @for $i from 1 through $grid-columns {
+    .rev-Col--large#{$i} {
+      width: 100% / $grid-columns * $i;
+    }
+  }
+}
+@media #{$xlarge-up} {
+  @for $i from 1 through $grid-columns {
+    .rev-Col--xlarge#{$i} {
+      width: 100% / $grid-columns * $i;
+    }
+  }
+}
+@media #{$xxlarge-up} {
+  @for $i from 1 through $grid-columns {
+    .rev-Col--xxlarge#{$i} {
+      width: 100% / $grid-columns * $i;
+    }
+  }
+}
+
+
+// CENTERED COLUMNS
+.rev-Col--smallCentered {
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media #{$medium-up} {
+  .rev-Col--mediumCentered {
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .rev-Col--mediumUncentered {
+    float: left;
+  }
+}
+@media #{$large-up} {
+  .rev-Col--largeCentered {
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .rev-Col--largeUncentered {
+    float: left;
+  }
+}
+@media #{$xlarge-up} {
+  .rev-Col--xlargeCentered {
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .rev-Col--xlargeUncentered {
+    float: left;
+  }
+}
+@media #{$xxlarge-up} {
+  .rev-Col--xxlargeCentered {
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .rev-Col--xxlargeUncentered {
+    float: left;
+  }
+}
+
+
+// PUSHES
+.rev-Col--smallPush1 {
+  @include rev-Col-push(1);
+}
+.rev-Col--smallPush2 {
+  @include rev-Col-push(2);
+}
+.rev-Col--smallPush3 {
+  @include rev-Col-push(3);
+}
+.rev-Col--smallPush4 {
+  @include rev-Col-push(4);
+}
+.rev-Col--smallPush5 {
+  @include rev-Col-push(5);
+}
+.rev-Col--smallPush6 {
+  @include rev-Col-push(6);
+}
+.rev-Col--smallPush7 {
+  @include rev-Col-push(7);
+}
+.rev-Col--smallPush8 {
+  @include rev-Col-push(8);
+}
+.rev-Col--smallPush9 {
+  @include rev-Col-push(9);
+}
+.rev-Col--smallPush10 {
+  @include rev-Col-push(10);
+}
+.rev-Col--smallPush11 {
+  @include rev-Col-push(11);
+}
+.rev-Col--smallPush12 {
+  @include rev-Col-push(12);
+}
+
+// PULLS
+.rev-Col--smallPull1 {
+  @include rev-Col-pull(1);
+}
+.rev-Col--smallPull2 {
+  @include rev-Col-pull(2);
+}
+.rev-Col--smallPull3 {
+  @include rev-Col-pull(3);
+}
+.rev-Col--smallPull4 {
+  @include rev-Col-pull(4);
+}
+.rev-Col--smallPull5 {
+  @include rev-Col-pull(5);
+}
+.rev-Col--smallPull6 {
+  @include rev-Col-pull(6);
+}
+.rev-Col--smallPull7 {
+  @include rev-Col-pull(7);
+}
+.rev-Col--smallPull8 {
+  @include rev-Col-pull(8);
+}
+.rev-Col--smallPull9 {
+  @include rev-Col-pull(9);
+}
+.rev-Col--smallPull10 {
+  @include rev-Col-pull(10);
+}
+.rev-Col--smallPull11 {
+  @include rev-Col-pull(11);
+}
+.rev-Col--smallPull12 {
+  @include rev-Col-pull(12);
+}

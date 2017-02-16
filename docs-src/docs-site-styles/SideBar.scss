@@ -1,11 +1,15 @@
 .SideBar {
   background: $sidebar-background;
   color: $sidebar-color;
+  display: none;
   height: 100vh;
   left: 0;
   overflow-y: scroll;
   position: fixed;
   top: 0;
+  @media #{$medium-up} {
+    display: block;
+  }
 }
 .SideBar-nav {
   list-style: none;

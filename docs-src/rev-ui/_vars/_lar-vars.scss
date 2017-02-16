@@ -14,29 +14,31 @@ $global-font-size-larger: 20px;
 
 $global-weight-normal: normal;
 $global-weight-bold: bold;
-$global-line-height: 1.6;
-$global-line-height-small: 1.2;
 $global-lineheight: 1.5;
 
+$global-radius: 2px;
+$global-rounded: 100000px;
+$global-box-shadow: 0 1px 6px 0 $black-15;
+
 // Global Padding
-$global-padding-tiny: rem-calc(5);
+// $global-padding-tiny: rem-calc(5);
 $global-padding-small: rem-calc(10);
 $global-padding: rem-calc(20);
 $global-padding-medium: rem-calc(30);
 $global-padding-large: rem-calc(40);
-$global-padding-larger: rem-calc(50);
-$global-padding-largest: rem-calc(60);
-$global-padding-jumbo: rem-calc(80);
+// $global-padding-larger: rem-calc(50);
+// $global-padding-largest: rem-calc(60);
+// $global-padding-jumbo: rem-calc(80);
 
 // Global Margin
-$global-margin-tiny: $global-padding-tiny;
+// $global-margin-tiny: $global-padding-tiny;
 $global-margin-small: $global-padding-small;
 $global-margin: $global-padding;
 $global-margin-medium: $global-padding-medium;
 $global-margin-large: $global-padding-large;
-$global-margin-larger: $global-padding-larger;
-$global-margin-largest: $global-padding-largest;
-$global-margin-jumbo: $global-padding-jumbo;
+// $global-margin-larger: $global-padding-larger;
+// $global-margin-largest: $global-padding-largest;
+// $global-margin-jumbo: $global-padding-jumbo;
 
 $disabled-opacity: 0.25;
 
@@ -48,15 +50,13 @@ $breakpoints: (
   xlarge: 1240px,
   xxlarge: 1440px,
 );
-$breakpoint-classes: (small medium large xlarge);
+$breakpoint-classes: (small medium large xlarge xxlarge);
 
 // Grid
 $global-flexbox: false;
 $grid-row-width: $global-width;
-$grid-column-gutter: (
-  small: 40px,
-  medium: 40px,
-);
+$grid-gutter: $global-padding;
+$grid-column-padding: calc(#{$grid-gutter} / 2);
 
 // Body Vars
 $body-background: $lighter-gray;
@@ -88,24 +88,24 @@ $header-color: $body-font-color;
 $header-font-family: $font-family-sans-serif;
 $header-font-style: normal;
 $header-font-weight: $global-weight-normal;
-// $header-lineheight: $global-line-height;
+// $header-lineheight: $global-lineheight;
 // $header-margin-bottom: 0;
 // $header-small-font-color: $header-color;
 
-$subheader-lineheight: $global-line-height;
+$subheader-lineheight: $global-lineheight;
 $subheader-color: $header-color;
 $subheader-font-weight: $global-weight-normal;
 $subheader-margin-top: 0;
 $subheader-margin-bottom: 0;
 
 // Paragraph Vars
-$paragraph-lineheight: $global-line-height;
+$paragraph-lineheight: $global-lineheight;
 $paragraph-margin-bottom: $global-margin;
 $paragraph-text-rendering: optimizeLegibility;
 
 // Anchor Vars
-$anchor-color: $primary;
-$anchor-color-hover: darken($primary, 10%);
+$anchor-color: $primary-color;
+$anchor-color-hover: darken($primary-color, 10%);
 $anchor-text-decoration: none;
 $anchor-text-decoration-hover: none;
 
@@ -132,8 +132,9 @@ $button-sizes: (
 );
 $button-opacity-disabled: $disabled-opacity;
 
+// CLOSE BUTTON
 $closebutton-color: $dark-gray;
 $closebutton-color-hover: $black;
-$closebutton-lineheight: $global-line-height;
+$closebutton-lineheight: $global-lineheight;
 $closebutton-position: right top;
 $closebutton-size: $global-font-size;

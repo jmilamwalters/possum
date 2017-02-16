@@ -1,18 +1,21 @@
-// REV CORE DOCS SITE STYLES
-@import '../scss/docs-site/colors';
-@import '../scss/docs-site/z-index';
-@import '../scss/docs-site/settings';
-@import '../scss/docs-site/_lar-vars';
+// REV UI BASE
+@import 'rev-ui/_vars/_vars';
+@import 'rev-ui/_mixins/_mixins';
 
+// OTHER CSS FRAMEWORK
 @import 'foundation';
 @include foundation-everything(false);
 // ^ true invokes the flex grid
 
-// REV CORE DOCS SITE STYLES
-@import '../scss/docs-site/overwrites';
-@import '../scss/Grid';
+// REV UI COMPONENTS
+// @import '../rev-ui/_base/overwrites'; // TODO: try to not need this
+@import 'rev-ui/Grid';
+@import 'rev-ui/BlockGrid';
+@import 'rev-ui/FlexGrid';
+@import 'rev-ui/Sections';
+@import 'rev-ui/Images';
 
-// REV CORE COMPONENT STYLES
+// REV CORE COMPONENT STYLES (SHIPS WITH REVCORE)
 @import '../scss/Pagination';
 @import '../scss/Modal';
 @import '../scss/CardLayout';
@@ -20,6 +23,12 @@
 @import '../scss/Expander';
 @import '../scss/FileInput';
 
-// REV CORE DOCS SITE STYLES
-@import '../scss/docs-site/SideBar';
-@import '../scss/docs-site/utilities';
+// DOCS SITE ONLY
+@import 'docs-site-styles/GridExample';
+@import 'docs-site-styles/SideBar';
+
+// REV UI UTILITIES
+@import 'rev-ui/_utilities/_utilities';
+
+// REV UI PRINT STYLES
+@import 'rev-ui/_print/_print';
