@@ -126,23 +126,6 @@ export class Nesting extends Component {
   }
 }
 
-export class Shrink extends Component {
-  render() {
-    return (
-      <div className="GridExample">
-        <Row>
-          <Col shrink>
-            <span className="GridExample-rev-Col">shrink</span>
-          </Col>
-          <Col>
-            <span className="GridExample-rev-Col">remainder</span>
-          </Col>
-        </Row>
-      </div>
-    )
-  }
-}
-
 export class Offsets extends Component {
   render() {
     return (
@@ -187,7 +170,7 @@ export class Offsets extends Component {
   }
 }
 
-export class IncompleteRowsWithoutFlexGrid extends Component {
+export class IncompleteRows extends Component {
   render() {
     return (
       <div className="GridExample">
@@ -219,7 +202,7 @@ export class IncompleteRowsWithoutFlexGrid extends Component {
   }
 }
 
-export class RowCollapse extends Component {
+export class Collapse extends Component {
   render() {
     return (
       <div className="GridExample">
@@ -254,7 +237,6 @@ export class RowCollapse extends Component {
             <span className="GridExample-rev-Col">.u-collapseHorizontal--medium-only</span>
           </Col>
         </Row>
-
       </div>
     )
   }
@@ -294,7 +276,7 @@ export class CenteredColumns extends Component {
   }
 }
 
-export class SourceOrderingWithoutFlexGrid extends Component {
+export class SourceOrdering extends Component {
   render() {
     return (
       <div className="GridExample">
@@ -384,7 +366,24 @@ export class BlockGrid extends Component {
   }
 }
 
-export class SourceOrderingWithFlexGrid extends Component {
+export class FlexShrink extends Component {
+  render() {
+    return (
+      <div className="GridExample">
+        <Row flex>
+          <Col shrink>
+            <span className="GridExample-rev-Col">shrink</span>
+          </Col>
+          <Col>
+            <span className="GridExample-rev-Col">remainder</span>
+          </Col>
+        </Row>
+      </div>
+    )
+  }
+}
+
+export class FlexSourceOrdering extends Component {
   render() {
     return (
       <div className="GridExample">
@@ -535,7 +534,7 @@ export class FlexVerticalAlignmentOnRow extends Component {
   }
 }
 
-export class VerticalAlignmentOnCol extends Component {
+export class FlexColAlignment extends Component {
   render() {
     return (
       <div className="GridExample">

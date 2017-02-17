@@ -39,6 +39,8 @@ const NUMBER_PROPS_TO_CLASS_NAMES = {
   smallOffset: (x) => [`rev-Col--smallOffset${x}`],
   mediumOffset: (x) => [`rev-Col--mediumOffset${x}`],
   largeOffset: (x) => [`rev-Col--largeOffset${x}`],
+  xlargeOffset: (x) => [`rev-Col--xlargeOffset${x}`],
+  xxlargeOffset: (x) => [`rev-Col--xxlargeOffset${x}`],
 
   smallPush: (x) => [`rev-Col--smallPush${x}`],
   mediumPush: (x) => [`rev-Col--mediumPush${x}`],

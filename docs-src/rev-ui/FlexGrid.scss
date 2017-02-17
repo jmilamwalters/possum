@@ -30,6 +30,10 @@
 }
 // Align Self
 .rev-Col {
+  &.rev-Col--shrink {
+    flex: 0 0 auto;
+    width: auto;
+  }
   &.rev-Col--end {
     align-self: flex-end;
   }
