@@ -4,7 +4,6 @@
   flex-wrap: $wrap;
   justify-content: $justify-content;
 }
-
 @mixin flexEqualWidthCols {
   @include flexProps($wrap: wrap);
   display: flex;

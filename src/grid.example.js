@@ -207,7 +207,7 @@ export class Collapse extends Component {
     return (
       <div className="GridExample">
         <Row>
-          <Col><p className="large"><strong>Controlled by Row</strong> Row has collapse props but collapsed Rows have been rewritten so that the collapse only affects the direct descendents of that Row.</p></Col>
+          <Col><p className="large"><strong>Controlled by Row prop</strong> collapse or uncollapse removes padding from direct descendent Cols. (nested Cols are unaffected)</p></Col>
         </Row>
         <Row mediumCollapse>
           <Col small={6}>
@@ -227,7 +227,7 @@ export class Collapse extends Component {
           </Col>
         </Row>
         <Row>
-          <Col><p className="large"><strong>Controlled by Col</strong> Row does not have collapse props or classes. Utility classes are added to the Col that needs collapsing. (since these are just utility classes, they can be used on whatever element needs collapse styles.)</p></Col>
+          <Col><p className="large"><strong>Controlled by utility classes on Col</strong> Utility classes added directly to elements that need padding removed.</p></Col>
         </Row>
         <Row>
           <Col small={6} className="u-collapseHorizontal--large-up">
@@ -339,11 +339,6 @@ export class BlockGrid extends Component {
   render() {
     return (
       <div className="GridExample">
-        <Row>
-          <Col>
-            <p className="large">Removed the default hover state for Thumbnail images.</p>
-          </Col>
-        </Row>
         <Row smallUp={2} mediumUp={3} largeUp={5}>
           <Col>
             <img src="https://unsplash.it/300/300/?random" className="Thumbnail" alt="Placeholder image from unsplash.it"/>
@@ -433,44 +428,44 @@ export class FlexHorizontalAlignmentOnRow extends Component {
   render() {
     return (
       <div className="GridExample">
-        <Row flex>
+        <Row flex start>
           <Col small={4}>
-            <span className="GridExample-rev-Col">justify-content</span>
+            <span className="GridExample-rev-Col">Row props: flex start</span>
           </Col>
           <Col small={4}>
-            <span className="GridExample-rev-Col">flex-start (default)</span>
+            <span className="GridExample-rev-Col">justify-content: flex-start (default)</span>
           </Col>
         </Row>
         <Row flex end>
           <Col small={4}>
-            <span className="GridExample-rev-Col">justify-content</span>
+            <span className="GridExample-rev-Col">Row props: flex end</span>
           </Col>
           <Col small={4}>
-            <span className="GridExample-rev-Col">flex-end</span>
+            <span className="GridExample-rev-Col">justify-content: flex-end</span>
           </Col>
         </Row>
         <Row flex center>
           <Col small={4}>
-            <span className="GridExample-rev-Col">justify-content</span>
+            <span className="GridExample-rev-Col">Row props: flex center</span>
           </Col>
           <Col small={4}>
-            <span className="GridExample-rev-Col">center</span>
+            <span className="GridExample-rev-Col">justify-content: center</span>
           </Col>
         </Row>
         <Row flex spaceBetween>
           <Col small={4}>
-            <span className="GridExample-rev-Col">justify-content</span>
+            <span className="GridExample-rev-Col">Row props: flex spaceBetween</span>
           </Col>
           <Col small={4}>
-            <span className="GridExample-rev-Col">space-between</span>
+            <span className="GridExample-rev-Col">justify-content: space-between</span>
           </Col>
         </Row>
         <Row flex spaceAround>
           <Col small={4}>
-            <span className="GridExample-rev-Col">justify-content</span>
+            <span className="GridExample-rev-Col">Row props: flex spaceAround</span>
           </Col>
           <Col small={4}>
-            <span className="GridExample-rev-Col">space-around</span>
+            <span className="GridExample-rev-Col">justify-content: space-around</span>
           </Col>
         </Row>
       </div>
@@ -484,7 +479,7 @@ export class FlexVerticalAlignmentOnRow extends Component {
       <div className="GridExample">
         <Row flex middle>
           <Col>
-            <span className="GridExample-rev-Col">I{"'"}m in the middle!</span>
+            <span className="GridExample-rev-Col">align-items: middle</span>
           </Col>
           <Col>
             <span className="GridExample-rev-Col">I am as well, but I have so much text I take up more space! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis facere ducimus earum minus, inventore, ratione doloremque deserunt neque perspiciatis accusamus explicabo soluta, quod provident distinctio aliquam omnis? Labore, ullam possimus.</span>
@@ -493,7 +488,7 @@ export class FlexVerticalAlignmentOnRow extends Component {
         <hr />
         <Row flex top>
           <Col>
-            <span className="GridExample-rev-Col">These columns align to the top.</span>
+            <span className="GridExample-rev-Col">align-items: top</span>
           </Col>
           <Col>
             <span className="GridExample-rev-Col">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, tempora. Impedit eius officia possimus laudantium? Molestiae eaque, sapiente atque doloremque placeat! In sint, fugiat saepe sunt dolore tempore amet cupiditate.</span>
@@ -502,7 +497,7 @@ export class FlexVerticalAlignmentOnRow extends Component {
         <hr />
         <Row flex bottom>
           <Col>
-            <span className="GridExample-rev-Col">bottom</span>
+            <span className="GridExample-rev-Col">align-items: bottom</span>
           </Col>
           <Col>
             <span className="GridExample-rev-Col">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, tempora. Impedit eius officia possimus laudantium? Molestiae eaque, sapiente atque doloremque placeat! In sint, fugiat saepe sunt dolore tempore amet cupiditate.</span>
@@ -511,7 +506,7 @@ export class FlexVerticalAlignmentOnRow extends Component {
         <hr />
         <Row flex stretch>
           <Col>
-            <span className="GridExample-rev-Col">stretch</span>
+            <span className="GridExample-rev-Col">align-items: stretch</span>
           </Col>
           <Col>
             <span className="GridExample-rev-Col">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, tempora. Impedit eius officia possimus laudantium? Molestiae eaque, sapiente atque doloremque placeat! In sint, fugiat saepe sunt dolore tempore amet cupiditate.</span>
@@ -520,7 +515,7 @@ export class FlexVerticalAlignmentOnRow extends Component {
         <hr />
         <Row flex baseline>
           <Col>
-            <span className="GridExample-rev-Col">baseline</span>
+            <span className="GridExample-rev-Col">align-items: baseline</span>
           </Col>
           <Col>
             <span className="GridExample-rev-Col"><small>baseline</small></span>

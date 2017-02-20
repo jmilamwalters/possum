@@ -60,7 +60,7 @@ $grid-gutter: $global-padding;
 $grid-column-padding: calc(#{$grid-gutter} / 2);
 
 // Body Vars
-$body-background: $lighter-gray;
+$body-background: $white;
 $body-font-color: $dark-gray;
 $body-font-family: $font-family-sans-serif;
 $body-antialiased: true;
@@ -89,15 +89,10 @@ $header-color: $body-font-color;
 $header-font-family: $font-family-sans-serif;
 $header-font-style: normal;
 $header-font-weight: $global-weight-normal;
-// $header-lineheight: $global-lineheight;
-// $header-margin-bottom: 0;
-// $header-small-font-color: $header-color;
 
-$subheader-lineheight: $global-lineheight;
 $subheader-color: $header-color;
+$header-font-family: $font-family-sans-serif;
 $subheader-font-weight: $global-weight-normal;
-$subheader-margin-top: 0;
-$subheader-margin-bottom: 0;
 
 // Paragraph Vars
 $paragraph-lineheight: $global-lineheight;
@@ -137,5 +132,4 @@ $button-opacity-disabled: $disabled-opacity;
 $closebutton-color: $dark-gray;
 $closebutton-color-hover: $black;
 $closebutton-lineheight: $global-lineheight;
-$closebutton-position: right top;
 $closebutton-size: $global-font-size;

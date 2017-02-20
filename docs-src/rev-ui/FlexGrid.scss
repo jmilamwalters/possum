@@ -1,4 +1,3 @@
-// FLEXGRID
 // Justify Content
 .rev-Row--end {
   @include flexJustifyEnd;
@@ -51,7 +50,6 @@
   }
 }
 // FLEX Odering
-$grid-colomns: 12;
 @for $i from 0 through $grid-columns {
   .rev-Col--smallOrder#{$i} {
     order: $i;

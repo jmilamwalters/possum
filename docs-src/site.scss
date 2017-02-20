@@ -1,14 +1,13 @@
+// OTHER CSS FRAMEWORK
+@import 'foundation';
+@include foundation-everything(false);
+
 // REV UI BASE
 @import 'rev-ui/_vars/_vars';
 @import 'rev-ui/_mixins/_mixins';
 
-// OTHER CSS FRAMEWORK
-@import 'foundation';
-@include foundation-everything(false);
-// ^ true invokes the flex grid
 
 // REV UI COMPONENTS
-// @import '../rev-ui/_base/overwrites'; // TODO: try to not need this
 @import 'rev-ui/Grid';
 @import 'rev-ui/BlockGrid';
 @import 'rev-ui/FlexGrid';
