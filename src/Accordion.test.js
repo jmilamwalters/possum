@@ -18,4 +18,16 @@ describe('Accordion', () => {
     expect(childClassName).to.contain(inherentClassName)
     expect(childClassName).to.contain(testClassName)
   })
+
+  it('should render with selected child active', () => {
+    const activeClass = "is-active"
+
+    const activeItem = shallow(
+      <Accordion active={1}>
+        <Accordion.Item contentKey={1} title="One" />
+      </Accordion>
+    ).childAt(0).prop('active')
+
+    expect(activeItem).to.be.true
+  })
 })
