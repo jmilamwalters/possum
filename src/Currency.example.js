@@ -1,10 +1,16 @@
 import React, {Component} from 'react'
 import Currency from './Currency'
 
-export class Example extends Component {
+export class Currencies extends Component {
   render() {
     return (
-      <Currency value={100.0000001} />
+      <div>
+        <p><Currency value={100.0000001} /></p>
+        <p><Currency currency="CAD" value={100.01} /></p>
+        <p><Currency currency="GBP" value={100.01} /></p>
+        <p><Currency currency="BTC" value={100.01} /></p>
+      </div>
+      
     )
   }
 }
