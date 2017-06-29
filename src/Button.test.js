@@ -16,4 +16,9 @@ describe('Button', () => {
     expect(childClassName).to.contain(inherentClassName)
     expect(childClassName).to.contain(testClassName)
   })
+
+  it('should render a link when passed an href', () => {
+    const wrapper = shallow(<Button href="https://google.com">Google</Button>)
+    expect(wrapper.is('a')).to.be.true
+  })
 })
