@@ -31,3 +31,24 @@ describe('Accordion', () => {
     expect(activeItem).to.be.true
   })
 })
+
+describe('Accordion.Stateful', () => {
+  it('should have state', () => {
+    const stateful = mount(
+      <Accordion.Stateful>
+        <Accordion.Item contentKey={1} title="One">1</Accordion.Item>
+      </Accordion.Stateful>
+    )
+    expect(stateful.state()).to.be.an('object')
+  })
+
+  it('should change state when an item is clicked', () => {
+    const stateful = mount(
+      <Accordion.Stateful>
+        <Accordion.Item contentKey={1} title="One">1</Accordion.Item>
+      </Accordion.Stateful>
+    )
+    stateful.find('a').simulate('click')
+    expect(stateful.state('active')['1']).to.equal(true)
+  })
+})
