@@ -12,7 +12,7 @@ export class Example extends Component {
           <Callout>
             Look at this close button!
             <CloseButton>
-              <Icon i="close"/>
+              <Icon i="x-circle"/>
             </CloseButton>
           </Callout>
         </Col>
