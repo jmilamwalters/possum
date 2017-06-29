@@ -1,4 +1,5 @@
 import Badge from './Badge'
+import Icon from './Icon'
 
 describe('Badge', () => {
   it('should render without throwing', () => {
@@ -17,10 +18,9 @@ describe('Badge', () => {
     expect(childClassName).to.contain(testClassName)
   })
 
-  // it('can render an icon', () => {
-  //   const icon = "home"
-    
-  //   const renderedIcon = shallow(<Badge icon={icon} /> ).first().prop()
-  //   expect(renderedIcon.contains).to.equal(icon)
-  // })
+  it('can render an icon', () => {
+    const renderedIcon = shallow(<Badge icon="home" /> )
+
+    expect(renderedIcon.containsAnyMatchingElements([<Icon/>])).to.be.true
+  })
 })
