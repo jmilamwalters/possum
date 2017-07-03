@@ -14,6 +14,12 @@ describe('FileInput', () => {
 
     expect(childClassName).to.contain(testClassName)
   })
+
+  it('should render a input with type "file"', () => {
+    const checkInput = mount(<FileInput />)
+
+    expect(checkInput.find("input[type='file']")).to.be.ok
+  })
 })
 
 describe('FileInput.Stack', () => {
@@ -29,5 +35,25 @@ describe('FileInput.Stack', () => {
       .prop('className')
 
     expect(childClassName).to.contain(testClassName)
+  })
+
+  it('should render label, help, and error text', () => {
+    const label = "This is the label."
+    const help = "This is help text."
+    const error = "This is an error."
+
+    const textCheck = mount(
+      <FileInput.Stack
+        label={label}
+        help={help}
+        error={error}
+        placeholder="The placeholder passes through."
+        button="Yay!"
+      />
+    ).text()
+
+    expect(textCheck).to.contain(label)
+    expect(textCheck).to.contain(help)
+    expect(textCheck).to.contain(error)
   })
 })
