@@ -16,4 +16,9 @@ describe('Label', () => {
     expect(childClassName).to.contain(inherentClassName)
     expect(childClassName).to.contain(testClassName)
   })
+
+  it('renders an icon when specified', () => {
+    const iconCheck = mount(<Label icon="home" />)
+    expect(iconCheck.find('i')).to.be.ok
+  })
 })
