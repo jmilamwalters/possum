@@ -1,6 +1,5 @@
 import Lipsum from './Lipsum'
 
-
 describe('Lipsum', () => {
   it('should render without throwing', () => {
     shallow(

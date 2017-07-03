@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-
+import PropTypes from 'prop-types'
 import AuthenticityToken from './AuthenticityToken'
 import classNames from 'classnames'
 
