@@ -6,4 +6,14 @@ describe('FlexVideo', () => {
       <FlexVideo />
     )
   })
+
+  it('should add className to child', () => {
+    const testClassName = '__TEST__'
+
+    const childClassName = shallow(<FlexVideo className={testClassName} />)
+      .first()
+      .prop('className')
+
+    expect(childClassName).to.contain(testClassName)
+  })
 })
