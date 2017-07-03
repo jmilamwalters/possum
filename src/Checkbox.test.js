@@ -37,4 +37,21 @@ describe('Checkbox.Fieldset', () => {
 
     expect(childClassName).to.contain(testClassName)
   })
+
+  it('can render helptext and errors', () => {
+    const helptext = "This is the help text."
+    const error = "This is the error."
+
+    const fieldsetText = mount(
+      <Checkbox.Fieldset 
+        name="with_both"
+        options={options} 
+        label="Stacks both help and error" 
+        help={helptext} 
+        error={error} 
+      />).text()
+    
+    expect(fieldsetText).to.include(helptext)
+    expect(fieldsetText).to.include(error)
+  })
 })
