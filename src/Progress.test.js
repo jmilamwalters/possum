@@ -6,4 +6,11 @@ describe('Progress', () => {
       <Progress value={40} />
     )
   })
+
+  it('should calculate width', () => {
+    const wrapper = shallow(<Progress value={40} />)
+    const theWidth = 'style="width:40%;"'
+
+    expect(wrapper.find("div.progress-meter").html()).to.contain(theWidth)
+  })
 })
