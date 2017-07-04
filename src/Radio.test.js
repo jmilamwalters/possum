@@ -37,4 +37,29 @@ describe('Radio.Fieldset', () => {
 
     expect(childClassName).to.contain(testClassName)
   })
+
+  it('should render the correct children', () => {
+    const wrapper = mount(<Radio.Fieldset options={options} />)
+
+    expect(wrapper.find("input[type='radio']")).to.have.length(2)
+  })
+
+  it('should render label, help, and error text', () => {
+    const label = "This is the label."
+    const help = "This is help text."
+    const error = "This is an error."
+
+    const textCheck = mount(
+      <Radio.Fieldset
+        options={options}
+        label={label}
+        help={help}
+        error={error}
+      />
+    ).text()
+
+    expect(textCheck).to.contain(label)
+    expect(textCheck).to.contain(help)
+    expect(textCheck).to.contain(error)
+  })
 })
