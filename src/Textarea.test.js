@@ -30,4 +30,22 @@ describe('Textarea.Stack', () => {
 
     expect(childClassName).to.contain(testClassName)
   })
+
+  it('should render label, help, and error text', () => {
+    const label = "This is the label."
+    const help = "This is help text."
+    const error = "This is an error."
+
+    const textCheck = mount(
+      <Textarea.Stack
+        label={label}
+        help={help}
+        error={error}
+      />
+    ).text()
+
+    expect(textCheck).to.contain(label)
+    expect(textCheck).to.contain(help)
+    expect(textCheck).to.contain(error)
+  })
 })
