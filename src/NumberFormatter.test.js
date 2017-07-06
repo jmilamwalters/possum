@@ -5,7 +5,7 @@ describe('NumberFormatter', () => {
     shallow(<NumberFormatter value={100} />)
   })
 
-  it('should pass props as options', () => {
+  it('accepts options as props', () => {
     const value = shallow(<NumberFormatter value={.24} style="percent" />).text()
     
     expect(value).to.equal("24%")

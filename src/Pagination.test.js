@@ -13,7 +13,7 @@ describe('Pagination', () => {
     )
   })
 
-  it('renders elements correctly', () => {
+  it('renders the correct elements', () => {
     const checkRender = mount(
       <Pagination
         currentPage={1}

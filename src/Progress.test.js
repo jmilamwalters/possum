@@ -7,7 +7,7 @@ describe('Progress', () => {
     )
   })
 
-  it('should calculate width', () => {
+  it('should calculate progress accurately', () => {
     const wrapper = shallow(<Progress value={40} />)
     const theWidth = 'style="width:40%;"'
 
