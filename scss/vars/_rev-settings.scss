@@ -34,7 +34,7 @@ $grid-columns: 12;
 
 // Spacing
 $global-vertical-space: $global-font-size * $global-lineheight;
-$global-horizontal-space: 2rem;
+$global-horizontal-space: 1.5rem;
 // ^ by default, global padding, margin, and grid padding based on this value
 
 // Global Padding
@@ -54,9 +54,9 @@ $grid-row-width: $global-width;
 $grid-column-padding: $global-horizontal-space;
 $grid-gutter: calc(#{$grid-column-padding} * 2);
 
-$global-radius: 2px;
+$global-radius: 0px;
 $global-rounded: 100000px;
-$global-box-shadow: 0 1px 6px 0 $black-15;
+$global-box-shadow: 0 1px 6px 0 $black-15, 0 0 3px 0 $black-15;
 
 
 // Body Vars
@@ -80,8 +80,8 @@ $paragraph-margin-bottom: $global-vertical-space;
 $paragraph-text-rendering: optimizeLegibility;
 
 // Anchor Vars
-$anchor-color: $primary-color;
-$anchor-color-hover: darken($primary-color, 10%);
+$anchor-color: $primary;
+$anchor-color-hover: darken($primary, 10%);
 $anchor-text-decoration: none;
 $anchor-text-decoration-hover: none;
 

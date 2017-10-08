@@ -1,0 +1,37 @@
+.Styleguide {
+  code {
+    display: block;
+    font-size: $global-font-size-tiny;
+    padding: $global-vertical-space $global-horizontal-space;
+  }
+}
+.Styleguide-swatch {
+  @include aspect-ratio(1,1);
+  &.Primary {
+    background: $primary;
+  }
+  &.Secondary {
+    background: $secondary;
+  }
+  &.Tertiary {
+    background: $tertiary;
+  }
+  &.Accent {
+    background: $accent;
+  }
+  &.BodyBkgd {
+    background: $body-bkgd;
+  }
+  &.BodyFontColor {
+    background: $body-font-color;
+  }
+  &.Success {
+    background: $success;
+  }
+  &.Warning {
+    background: $warning;
+  }
+  &.Alert {
+    background: $alert;
+  }
+}

@@ -3,14 +3,31 @@ import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 import {Row, Col} from 'revelry-components/lib/grid'
+import TopBar from 'revelry-components/lib/TopBar'
+import Menu from 'revelry-components/lib/Menu'
 import Navigation from './Navigation'
 
 import './index.scss'
 
 const Header = () => (
-  <header className="rev-Header">
-    <Link to="/">Ockham</Link>
-  </header>
+  <TopBar>
+    <TopBar.Title>
+      <Link to="/">Ockham</Link>
+    </TopBar.Title>
+    <TopBar.Right>
+      <Menu right>
+        <Menu.Item>
+          <Link to="/">FAQ</Link>
+        </Menu.Item>
+        <Menu.Item>
+          <Link to="/">Search</Link>
+        </Menu.Item>
+        <Menu.Item>
+          <Link to="/">Log In</Link>
+        </Menu.Item>
+      </Menu>
+    </TopBar.Right>
+  </TopBar>
 )
 
 const TemplateWrapper = ({

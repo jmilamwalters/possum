@@ -2999,9 +2999,9 @@ gatsby-link@^1.0.1:
     prop-types "^15.5.8"
     ric "^1.3.0"
 
-gatsby-module-loader@^1.0.5:
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/gatsby-module-loader/-/gatsby-module-loader-1.0.6.tgz#d0c4c10fa8df7a2dde1515cbc1389be186aa4a47"
+gatsby-module-loader@^1.0.7:
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/gatsby-module-loader/-/gatsby-module-loader-1.0.7.tgz#c103ca41765d21453cc104e77190e491210abc75"
   dependencies:
     babel-runtime "^6.26.0"
     loader-utils "^0.2.16"
@@ -3024,17 +3024,17 @@ gatsby-plugin-sass@^1.0.1:
     sass-loader "^4.1.1"
     webpack "^1.13.3"
 
-gatsby-react-router-scroll@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/gatsby-react-router-scroll/-/gatsby-react-router-scroll-1.0.1.tgz#2e0132807273e544f05bed016645b6e2dfe08c48"
+gatsby-react-router-scroll@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/gatsby-react-router-scroll/-/gatsby-react-router-scroll-1.0.2.tgz#3fd66c242753eb447e7b2d450afa69c296908c0b"
   dependencies:
     babel-runtime "^6.26.0"
     scroll-behavior "^0.9.1"
     warning "^3.0.0"
 
-gatsby@^1.0.1:
-  version "1.9.43"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-1.9.43.tgz#e4a495f424f7ae4dc676701d56d47d3512cd374d"
+gatsby@^1.9.52:
+  version "1.9.52"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-1.9.52.tgz#8689bff04ec480ed7e98271a928f3e81245743b4"
   dependencies:
     async "^2.1.2"
     babel-code-frame "^6.22.0"
@@ -3077,12 +3077,12 @@ gatsby@^1.0.1:
     front-matter "^2.1.0"
     fs-extra "^4.0.1"
     gatsby-1-config-css-modules "^1.0.4"
-    gatsby-module-loader "^1.0.5"
-    gatsby-react-router-scroll "^1.0.1"
+    gatsby-module-loader "^1.0.7"
+    gatsby-react-router-scroll "^1.0.2"
     glob "^7.1.1"
     graphql "^0.10.3"
     graphql-relay "^0.5.1"
-    graphql-skip-limit "^1.0.5"
+    graphql-skip-limit "^1.0.6"
     gray-matter "^2.1.0"
     hapi "^8.5.1"
     history "^4.6.2"
@@ -3312,9 +3312,9 @@ graphql-relay@^0.5.1:
   version "0.5.2"
   resolved "https://registry.yarnpkg.com/graphql-relay/-/graphql-relay-0.5.2.tgz#40ff714efd60c2cd89e0bcc79e2afa6d87fa8673"
 
-graphql-skip-limit@^1.0.5:
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/graphql-skip-limit/-/graphql-skip-limit-1.0.5.tgz#88d7a513340c4afb16c87fb37f1987eeae84933f"
+graphql-skip-limit@^1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/graphql-skip-limit/-/graphql-skip-limit-1.0.6.tgz#045b14b48cd5fc8b068abd16b1407b1b4e0c516d"
   dependencies:
     babel-runtime "^6.26.0"
 

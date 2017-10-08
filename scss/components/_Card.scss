@@ -1,6 +1,7 @@
 $card-background: $white !default;
-$card-border: 1px solid $divider-color !default;
-$card-padding: $global-padding !default;
+$card-border: 0 !default;
+$card-box-shadow: $global-box-shadow !default;
+$card-padding: 0 !default;
 $card-radius: $global-radius !default;
 $card-header-background: $white !default;
 $card-footer-background: $white !default;
@@ -12,6 +13,10 @@ $card-footer-background: $white !default;
   background-color: $card-background;
   border: $card-border;
   border-radius: $card-radius;
+  box-shadow: $card-box-shadow;
+  display: block;
+  margin: 0 0 $global-vertical-space;
+  width: 100%;
   :first-child {
     border-radius: $card-radius $card-radius 0 0;
   }
