@@ -82,6 +82,7 @@ $paragraph-text-rendering: optimizeLegibility;
 // Anchor Vars
 $anchor-color: $primary;
 $anchor-color-hover: darken($primary, 10%);
+$anchor-color-active: darken($primary, 10%);
 $anchor-text-decoration: none;
 $anchor-text-decoration-hover: none;
 
@@ -96,15 +97,50 @@ $no-image-blur: blur(0px);
 
 $disabled-opacity: 0.25;
 
-// ACCORDION
+
+//** Component Vars are commented out here because each compnent has its !default vars set at the top of the component stylesheet. If vars need to be updated, you can uncomment them below and make your changes. Vars below will always override the !default vars in the component stylesheets
+
+//## CONTAINERS -----------------------------
+
+//## Accordions
 //$accordion-border-size: 1px;
 //$accordion-border-color: $divider-color;
-//$accordion-title-bkgd: $body-bkgd;
-//$accordion-title-color: $anchor-color;
+//$accordion-title-bkgd: $white;
+//$accordion-title-color: $primary;
 //$accordion-title-bkgd-hover: darken($accordion-title-bkgd, 5%);
-//$accordion-title-color-hover: $accordion-title-color;
+//$accordion-title-color-hover: $accordion-title-color-hover;
 //$accordion-title-bkgd-active: darken($accordion-title-bkgd, 5%);
 //$accordion-title-color-active: $accordion-title-color;
+
+//## Callouts
+//$callout-bkgd: $white;
+//$callout-border-size: 1px;
+//$callout-border-color: $divider-color;
+//$callout-color: $body-font-color;
+//$callout-padding: $global-vertical-space $global-horizontal-space;
+
+//## Modals
+//$modal-bkgd: $black-40;
+//$modal-content-bkgd: $white;
+//$modal-content-border-size: 1px;
+//$modal-content-border-color: $divider-color;
+//$modal-content-box-shadow: $global-box-shadow !default;
+//$modal-content-color: $body-font-color;
+//$modal-content-padding: 0;
+
+//## Tabs
+//$tabs-margin: $global-vertical-space;
+//$tabs-border-size: 1px !default;
+//$tabs-border-color: $divider-color !default;
+//$tabs-title-bkgd: transparent !default;
+//$tabs-title-link-bkgd: $divider-color !default;
+//$tabs-title-link-color: $anchor-color !default;
+//$tabs-title-link-bkgd-hover: darken($tabs-title-link-bkgd, 5%) !default;
+//$tabs-title-link-color-hover: $anchor-color-hover !default;
+//$tabs-title-link-bkgd-active: darken($tabs-title-link-bkgd, 5%) !default;
+//$tabs-title-link-color-active: $anchor-color-hover !default;
+//$tabs-title-link-padding: $global-vertical-space $global-horizontal-space !default;
+//$tabs-content-padding: $global-vertical-space 0 !default;
 
 // TOPBAR
 //$topbar-bkgd: $body-bkgd;
