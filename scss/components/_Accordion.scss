@@ -3,8 +3,8 @@
 // this way updates can be made to a component by uncommenting settings vars
 $accordion-border-size: 1px !default;
 $accordion-border-color: $divider-color !default;
-$accordion-title-bkgd: $white !default;
-$accordion-title-color: $primary;
+$accordion-title-bkgd: $body-bkgd !default;
+$accordion-title-color: $anchor-color !default;
 $accordion-title-bkgd-hover: darken($accordion-title-bkgd, 5%) !default;
 $accordion-title-color-hover: $accordion-title-color!default;
 $accordion-title-bkgd-active: darken($accordion-title-bkgd, 5%) !default;
