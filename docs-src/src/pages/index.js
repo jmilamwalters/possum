@@ -46,7 +46,15 @@ const IndexPage = () => (
     <Row>
       <Col>
         <h3>Utility Colors</h3>
-        <p>Utility colors are used for specific scenarios on the application. Be default, we stick to basic US color symbolism  but you may want to make edits of your main colors are green, red, or yellow</p>
+        <p>Utility colors are used for specific scenarios on the application. We use these to set colors for user feedback and status-based components.</p>
+      </Col>
+      <Col small={6} large={3}>
+        <CardLayout>
+          <CardLayout.Bar className="Styleguide-swatch Info" />
+          <CardLayout.Bar>
+            <code>$info</code>
+          </CardLayout.Bar>
+        </CardLayout>
       </Col>
       <Col small={6} large={3}>
         <CardLayout>

@@ -4,6 +4,8 @@ import classNames from 'classnames'
 const BOOL_PROPS_TO_CLASS_NAMES = {
   stackedForMedium: 'stacked-for-medium',
   stackedForLarge: 'stacked-for-large',
+  fixed: 'rev-TopBar--fixed',
+  inverse: 'rev-TopBar--inverse',
 }
 const BOOL_PROPS = Object.keys(BOOL_PROPS_TO_CLASS_NAMES)
 

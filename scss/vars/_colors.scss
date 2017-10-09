@@ -1,13 +1,17 @@
 $test: #F0F;
 
-$poppy: #FE4A49;
-$dark-teal: #558193;
-$blue: #3E80D6;
-$rev-yellow: #fcbd40;
-$rev-yellow-light: #FFCD6B;
-$green: #69B578;
-$red: #D8172B;
-$orange: #E4572E;
+// BRAND COLORS
+$brand-electric-purple: #871EFF;
+$brand-default-blue: #1D64D6;
+$brand-poppy: #FF3C38;
+$brand-jade: #0A6D50;
+$brand-revelry: #FCBD40;
+
+// UTIL COLORS
+$util-green: #00B55D;
+$util-red: #F42424;
+$util-orange: #FF6C28;
+
 
 $white: #FFF;
 $white-5: rgba(255, 255, 255, 0.05);
@@ -32,15 +36,15 @@ $black-45: rgba(0, 0, 0, 0.45);
 $black-70: rgba(0, 0, 0, 0.70);
 $black-80: rgba(0, 0, 0, 0.80);
 
-$primary: $dark-teal;
+$primary: $brand-default-blue;
 $secondary: $darker-gray;
 $tertiary: $lightest-gray;
-$accent: $rev-yellow-light;
+$accent: $brand-revelry;
 
 $info: $primary;
-$success: $green;
-$alert: $red;
-$warning: $orange;
+$success: $util-green;
+$alert: $util-red;
+$warning: $util-orange;
 $cancel-color: $black;
 $cancel: $cancel-color;
 

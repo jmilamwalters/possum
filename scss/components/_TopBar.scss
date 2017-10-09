@@ -1,29 +1,38 @@
-$topbar-height: 60px;
-$topbar-bkgd: $darker-gray;
-$topbar-color: $lightest-gray;
-$topbar-height: 60px;
-$topbar-link-color: $anchor-color;
-$topbar-link-color-hover: $anchor-color-hover;
-
+$topbar-bkgd: $body-bkgd !default;
+$topbar-color: $body-font-color !default;
+$topbar-height: 60px !default;
 
 .rev-TopBar {
-  @include flex(stretch, row, space-between, no-wrap);
   background: $topbar-bkgd;
   color: $topbar-color;
   height: $topbar-height;
+  margin: 0;
+  padding: 0;
   position: relative;
-  padding: 0 $global-padding;
   z-index: $above;
+  &.rev-TopBar--inverse {
+    background: $body-font-color;
+    color: $body-bkgd;
+  }
+  &.rev-TopBar--fixed {
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  .rev-Row {
+    @include flex(stretch, row);
+  }
 }
 .rev-TopBar-title,
 .rev-TopBar-left,
 .rev-TopBar-right {
+  width: auto;
   ul {
     margin: 0;
     padding: 0;
   }
 }
-
 .rev-TopBar-title {
   line-height: $topbar-height;
 }

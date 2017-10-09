@@ -56,7 +56,7 @@ $grid-gutter: calc(#{$grid-column-padding} * 2);
 
 $global-radius: 0px;
 $global-rounded: 100000px;
-$global-box-shadow: 0 1px 6px 0 $black-15, 0 0 3px 0 $black-15;
+$global-box-shadow: 0 1px 6px 0 $black-15, 0 0 3px 0 $black-8;
 
 
 // Body Vars
@@ -95,3 +95,8 @@ $image-blur: blur(8px);
 $no-image-blur: blur(0px);
 
 $disabled-opacity: 0.25;
+
+// TOPBAR
+/*$topbar-bkgd: $body-bkgd;
+$topbar-color: $body-font-color;
+$topbar-height: 60px;*/

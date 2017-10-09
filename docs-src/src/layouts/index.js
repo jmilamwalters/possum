@@ -10,7 +10,7 @@ import Navigation from './Navigation'
 import './index.scss'
 
 const Header = () => (
-  <TopBar>
+  <TopBar fixed inverse>
     <TopBar.Title>
       <Link to="/">Ockham</Link>
     </TopBar.Title>
@@ -45,7 +45,7 @@ const TemplateWrapper = ({
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/codemirror/5.0.0/theme/monokai.min.css"/>
       </Helmet>
       <Header />
-      <div className="rev-Split">
+      <div className="rev-Split ContentWrapper">
         <Navigation />
         <div className="rev-MainPanel">
           <main className="rev-MainPanel-content">

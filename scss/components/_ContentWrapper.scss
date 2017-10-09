@@ -1,0 +1,8 @@
+.ContentWrapper {
+  display: block;
+}
+.rev-TopBar--fixed {
+  + .ContentWrapper {
+    padding-top: $topbar-height;
+  }
+}
