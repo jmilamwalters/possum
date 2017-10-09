@@ -12,6 +12,7 @@ $accordion-title-color-active: $accordion-title-color!default;
 
 .rev-Accordion { // ul
   border: $accordion-border-size solid $accordion-border-color;
+  border-bottom: 0;
   margin-bottom: $global-vertical-space;
 }
 .rev-AccordionItem { // li
