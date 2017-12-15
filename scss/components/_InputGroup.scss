@@ -8,6 +8,7 @@
   .rev-Button,
   .rev-InputGroup-label {
     @include small-input;
+    margin: 0;
     position: relative;
     top: -$input-border-width;
   }
@@ -15,4 +16,5 @@
     background-color: $input-border-color;
     color: darken($input-border-color, 40%);
   }
+  @include flex(stretch, row, flex-start, no-wrap);
 }
